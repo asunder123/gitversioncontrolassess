@@ -802,6 +802,9 @@ patterns are available:
 
 - `ada` suitable for source code in the Ada language.
 
+- `bash` suitable for source code in the Bourne-Again SHell language.
+  Covers a superset of POSIX shell function definitions.
+
 - `bibtex` suitable for files with BibTeX coded references.
 
 - `cpp` suitable for source code in the C and C++ languages.
@@ -1241,6 +1244,13 @@ to:
 [attr]binary -diff -merge -text
 ------------
 
+NOTES
+-----
+
+Note that Git does not allow a `.gitattributes` file within the working
+tree to be a symbolic link, and will refuse to check out such a tree
+entry.  This keeps behavior consistent when the file is accessed from
+the index or a tree versus from the filesystem.
 
 EXAMPLES
 --------
